@@ -1,0 +1,282 @@
+// Container
+.container {
+  max-width: $max-width;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+
+// Typography
+.x-large {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.large {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-primary {
+  color: $primary-color;
+}
+.text-dark {
+  color: $dark-color;
+}
+.text-light {
+  color: $light-color;
+}
+.text-danger {
+  color: $danger-color;
+}
+.text-success {
+  color: $success-color;
+}
+.text-default {
+  color: #fff;
+}
+.line {
+  height: 1px;
+  background-color: #ccc;
+  margin: 1.5rem 0;
+}
+.round-img {
+  border-radius: 50%;
+}
+
+// Backgrounds
+.bg {
+  &-primary {
+    @include set-bg($primary-color);
+  }
+  &-dark {
+    @include set-bg($dark-color);
+  }
+  &-light {
+    @include set-bg($light-color);
+    border: solid 1px #ccc;
+  }
+  &-danger {
+    @include set-bg($danger-color);
+  }
+  &-success {
+    @include set-bg($success-color);
+  }
+  &-white {
+    @include set-bg(#fff);
+    border: solid 1px #ccc;
+  }
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  background: $light-color;
+  color: #333;
+  padding: 0.4rem 1.3rem;
+  border: none;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    background-color: lighten($dark-color, 20%);
+    color: #fff;
+  }
+
+  &.btn-default {
+    @include set-bg($light-color);
+    &:hover {
+      background-color: lighten($dark-color, 20%);
+      color: #fff;
+    }
+  }
+
+  &.btn-primary {
+    @include set-bg($primary-color);
+    &:hover {
+      background-color: lighten($primary-color, 5%);
+    }
+  }
+
+  &.btn-dark {
+    @include set-bg($dark-color);
+    &:hover {
+      background-color: lighten($dark-color, 5%);
+    }
+  }
+
+  &.btn-danger {
+    @include set-bg($danger-color);
+    &:hover {
+      background-color: lighten($danger-color, 5%);
+    }
+  }
+
+  &.btn-success {
+    @include set-bg($success-color);
+    &:hover {
+      background-color: lighten($success-color, 5%);
+    }
+  }
+
+  &.btn-white {
+    @include set-bg(#fff);
+    &:hover {
+      background-color: darken(#fff, 10%);
+    }
+  }
+}
+
+// Alerts
+.alert {
+  padding: 0.8rem;
+  margin: 1rem;
+  opacity: 0.9;
+  background: $light-color;
+  color: #333;
+
+  &.alert-default {
+    @include set-bg($light-color);
+  }
+
+  &.alert-primary {
+    @include set-bg($primary-color);
+  }
+
+  &.alert-dark {
+    @include set-bg($dark-color);
+  }
+
+  &.alert-danger {
+    @include set-bg($danger-color);
+  }
+
+  &.alert-success {
+    @include set-bg($success-color);
+  }
+
+  &.alert-white {
+    @include set-bg(#fff);
+  }
+}
+
+// Badges
+.badge {
+  font-size: 0.8rem;
+  padding: 0.1rem;
+  text-align: center;
+  margin: 0.3rem;
+  background-color: $light-color;
+  color: #333;
+
+  &.badge-default {
+    @include set-bg($light-color);
+  }
+
+  &.badge-primary {
+    @include set-bg($primary-color);
+  }
+
+  &.badge-dark {
+    @include set-bg($dark-color);
+  }
+
+  &.badge-danger {
+    @include set-bg($danger-color);
+  }
+
+  &.badge-success {
+    @include set-bg($success-color);
+  }
+
+  &.badge-white {
+    @include set-bg(#fff);
+  }
+}
+
+// Form
+.form {
+  &-group {
+    margin: 1.2rem 0;
+  }
+  &-text {
+    display: block;
+    margin-top: 0.3rem;
+    color: #aaa;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="password"],
+  select,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+  }
+  .btn {
+    font-family: inherit;
+  }
+  .social-input {
+    display: flex;
+    i {
+      color: initial;
+      width: 4rem;
+      padding: 0.5rem;
+      &.fa-twitter {
+        color: #38a1f3;
+      }
+      &.fa-facebook {
+        color: #3b5998;
+      }
+      &.fa-youtube {
+        color: #c4302b;
+      }
+      &.fa-linkedin {
+        color: #0077b5;
+      }
+      &.fa-instagram {
+        color: #3f729b;
+      }
+    }
+  }
+}
+
+.dark-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+// Tables
+.table {
+  th,
+  td {
+    padding: 1rem;
+    text-align: left;
+  }
+  th {
+    background-color: $light-color;
+  }
+}
+
+button {
+  font-size: 1rem;
+}
